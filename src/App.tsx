@@ -1,12 +1,16 @@
 import frameOne from './assets/Frame (1).png'
 import frameTwo from './assets/Frame (2).png'
+import logo_2 from './assets/logo_2.png'
 
 function App() {
   return (
     <div className="site">
       <header className="nav">
         <div className="container nav__inner">
-          <a href="#home" className="brand">Wheelers</a>
+          <a href="#home" className="brand" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={logo_2} alt="Wheelers" style={{ height: '32px', width: 'auto' }} />
+            <span style={{ marginLeft: '8px' }}>Wheelers</span>
+          </a>
           <nav className="nav__links">
             <a href="#riders">Riders</a>
             <a href="#drivers">Drivers</a>
@@ -25,12 +29,11 @@ function App() {
             <div className="hero__content">
               <h1>Ride further, faster, fairer</h1>
               <p className="lead">
-                Wheelers is a modern ride‑hailing platform built for riders and drivers.
+                Wheelers is a modern ride‑hailing platform with driver and user modes in one app.
                 Safe, reliable rides for passengers. Better earnings and tools for drivers.
               </p>
               <div className="cta__group">
-                <a className="btn btn--primary" href="#download">Download Rider App</a>
-                <a className="btn btn--secondary" href="#download">Download Driver App</a>
+                <a className="btn btn--primary" href="#download">Download App</a>
               </div>
               {/* <div className="cta__group cta__group--sub">
                 <a className="link" href="https://www.figma.com/design/FTffD6EGXmZzcWjlkXplgk/Wheelers?node-id=0-1&p=f&t=CMcY2nViLJV4096a-0" target="_blank" rel="noreferrer">View Rider Screens</a>
@@ -240,28 +243,13 @@ function App() {
 
         <section id="download" className="section">
           <div className="container">
-            <h2>Get the apps</h2>
-            <p className="section__intro">Download Wheelers for iOS or Android</p>
-            <div className="app-store">
+            <h2>Get the app</h2>
+            <p className="section__intro">Download Wheelers for iOS or Android - Switch between driver and user modes</p>
+            <div className="app-store" style={{ justifyContent: 'center' }}>
               <div className="app-card">
                 <div className="app-icon">📱</div>
-                <h3>Rider App</h3>
-                <p>Request rides, track drivers, pay seamlessly</p>
-                <div className="store-buttons">
-                  <a className="store-btn store-btn--ios" aria-disabled="true" href="#">
-                    <span>Download on</span>
-                    <strong>App Store</strong>
-                  </a>
-                  <a className="store-btn store-btn--android" aria-disabled="true" href="#">
-                    <span>Get it on</span>
-                    <strong>Google Play</strong>
-                  </a>
-                </div>
-              </div>
-              <div className="app-card">
-                <div className="app-icon">🚗</div>
-                <h3>Driver App</h3>
-                <p>Accept rides, navigate routes, earn more</p>
+                <h3>Wheelers App</h3>
+                <p>One app with driver and user modes. Request rides as a passenger or accept rides as a driver.</p>
                 <div className="store-buttons">
                   <a className="store-btn store-btn--ios" aria-disabled="true" href="#">
                     <span>Download on</span>
